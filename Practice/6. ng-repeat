@@ -2,7 +2,7 @@
 
 $scope.colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 
-<div></div>
+<div ng-repeat="color in colors"> {{color}} </div>
 
 
 *****************************************************
@@ -20,8 +20,8 @@ $scope.heroes = [
 	}
 ]
 
-<div>
-
+<div ng-repeat="hero in heroes">
+	{{ hero.alias }}
 </div>
 
 ***************************************************** 
@@ -32,6 +32,7 @@ $scope.heroes = [
 	{
 		name: 'Natasha',
 		alias: 'Black Widow'
+		image: 'https://superheros.com/blackwidow/profilepic.jpg'
 	},
 	{
 		name: 'Bruce',
@@ -39,6 +40,11 @@ $scope.heroes = [
 	}
 ]
 
-<div>
-
+<div ng-repeat="hero in heroes">
+	<img ng-src="hero.image"></img>
+	{{ hero.alias }} : {{ hero.name }}
 </div>
+
+
+
+

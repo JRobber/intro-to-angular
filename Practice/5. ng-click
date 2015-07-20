@@ -1,8 +1,10 @@
 //call a function named open when this button is pressed
 
-<button>Open</button>
+<button ng-click="open()" >Open</button>
 
-$scope.
+$scope.open = function() {
+	
+}
 
 
 *****************************************************
